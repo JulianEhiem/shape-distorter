@@ -1,0 +1,27 @@
+body {
+  background: lightcyan;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    ".. .. .."
+    ".. box .."
+    ".. values .."
+    ".. .. ..";
+}
+
+.border-box {
+  grid-area: box;
+  background-color: red;
+}
+
+.form {
+  grid-area: values;
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+}
+* + * {
+  margin: 10px;
+}
